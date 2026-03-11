@@ -18,10 +18,8 @@ export default function Index() {
       <header className="border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center">
-              <Wallet className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="font-bold text-lg text-foreground">MyBudgetPlan</span>
+            <img src="234307512.png" alt="BudgetDock Logo" className="h-9 w-9 object-contain" />
+            <span className="font-bold text-lg text-foreground">BD</span>
           </div>
           <div className="flex gap-2">
             <Button variant="ghost" onClick={() => navigate("/auth")}>Sign In</Button>
@@ -63,7 +61,7 @@ export default function Index() {
       </main>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} MyBudgetPlan. Free personal budget management.
+        © {new Date().getFullYear()} BudgetDock. Free personal budget management.
       </footer>
     </div>
   );

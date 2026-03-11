@@ -64,10 +64,8 @@ export default function ResetPassword() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md">
         <div className="flex items-center justify-center gap-2 mb-8">
-          <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-            <Wallet className="h-6 w-6 text-primary-foreground" />
-          </div>
-          <h1 className="text-2xl font-bold text-foreground">MyBudgetPlan</h1>
+          <img src="234307512.png" alt="BudgetDock Logo" className="h-10 w-10 object-contain" />
+          <h1 className="text-2xl font-bold text-foreground">BudgetDock</h1>
         </div>
         <Card>
           <CardHeader className="text-center">

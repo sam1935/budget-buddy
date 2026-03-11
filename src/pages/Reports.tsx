@@ -56,7 +56,7 @@ export default function Reports() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `mybudgetplan-report-${startDate}-${endDate}.csv`;
+    a.download = `budgetdock-report-${startDate}-${endDate}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -64,12 +64,12 @@ export default function Reports() {
   const exportPDF = () => {
     // Simple print-based PDF export
     const printContent = `
-      <html><head><title>MyBudgetPlan Report</title>
+      <html><head><title>BudgetDock Report</title>
       <style>body{font-family:sans-serif;padding:20px}table{width:100%;border-collapse:collapse;margin-top:20px}
       th,td{border:1px solid #ddd;padding:8px;text-align:left;font-size:12px}th{background:#f5f5f5}
       h1{color:#166534}h2{color:#333;margin-top:30px}.summary{display:flex;gap:40px;margin:20px 0}
       .stat{padding:15px;border-radius:8px;background:#f9f9f9}.green{color:#10B981}.red{color:#EF4444}</style></head>
-      <body><h1>MyBudgetPlan Report</h1><p>${startDate} to ${endDate}</p>
+      <body><h1>BudgetDock Report</h1><p>${startDate} to ${endDate}</p>
       <div class="summary"><div class="stat"><strong>Income:</strong> <span class="green">$${totalIncome.toFixed(2)}</span></div>
       <div class="stat"><strong>Expenses:</strong> <span class="red">$${totalExpenses.toFixed(2)}</span></div>
       <div class="stat"><strong>Balance:</strong> $${(totalIncome - totalExpenses).toFixed(2)}</div></div>
