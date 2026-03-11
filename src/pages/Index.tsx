@@ -13,13 +13,23 @@ export default function Index() {
   }, [user, loading, navigate]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div className="absolute top-[10%] left-[10%] text-primary/20 animate-float-1 text-7xl font-bold">₹</div>
+        <div className="absolute top-[20%] right-[15%] text-primary/15 animate-float-2 text-8xl font-black">$</div>
+        <div className="absolute bottom-[20%] left-[20%] text-primary/10 animate-float-3 text-9xl font-bold">€</div>
+        <div className="absolute bottom-[30%] right-[10%] text-primary/20 animate-float-4 text-6xl font-black">£</div>
+        <div className="absolute top-[40%] left-[40%] text-primary/15 animate-float-1 text-5xl font-bold">¥</div>
+        <div className="absolute top-[60%] right-[30%] text-primary/25 animate-float-2 text-7xl font-bold">₹</div>
+      </div>
+
       {/* Hero */}
-      <header className="border-b border-border">
+      <header className="border-b border-border relative z-10 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-2">
             <img src="234307512.png" alt="BudgetDock Logo" className="h-9 w-9 object-contain" />
-            <span className="font-bold text-lg text-foreground">BD</span>
+            <span className="font-bold text-lg text-foreground">BudgetDock</span>
           </div>
           <div className="flex gap-2">
             <Button variant="ghost" onClick={() => navigate("/auth")}>Sign In</Button>
@@ -28,7 +38,7 @@ export default function Index() {
         </div>
       </header>
 
-      <main>
+      <main className="relative z-10">
         <section className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 max-w-2xl mx-auto leading-tight">
             Take Control of Your <span className="text-primary">Finances</span>
@@ -60,7 +70,7 @@ export default function Index() {
         </section>
       </main>
 
-      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
+      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground relative z-10 bg-background/80 backdrop-blur-sm">
         © {new Date().getFullYear()} BudgetDock. Free personal budget management.
       </footer>
     </div>
